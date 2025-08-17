@@ -1,46 +1,51 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Tool from './tool'
 
 function App() {
   return (
     <>
       <h1>Vite + React</h1>
+
+      <Tool task="learn react" isdone={true}></Tool>
+
       <Person />
       <Person />
-      <Person />
-      <Person />
-      <Person />
-      <Student />
-      <Devloper />
+
+      {/* Dynamic Students */}
+      <Student name="Abid" age={20} />
+      <Student name="Rahim" age={22} />
+
+      {/* Dynamic Developers */}
+      <Devloper classroom="1" grades={5.00} />
+      <Devloper classroom="2" grades={4.75} />
     </>
   )
 }
 
 function Person() {
-  const age = 25;
-  const money = 2000;
-  const person = { name: 'abid', age: 12 }
+  const age = 25
+  const money = 2000
+  const person = { name: 'Abid', age: 12 }
   return (
     <>
       <h3>I am a person with age: {age} and money: {money}</h3>
-      <h3>I am {person.name} with {age}</h3>
+      <h3>I am {person.name} with {person.age}</h3>
     </>
   )
 }
 
-function Student() {
+function Student({ name, age }) {
   return (
-    <div className='student'>
-      <h3>This is student</h3>
-      <p>Name:</p>
-      <p>Age:</p>
+    <div className='student' style={{ margin: '10px', padding: '10px', border: '1px solid blue', borderRadius: '10px' }}>
+      <h3>Student Info:</h3>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
     </div>
   )
 }
 
-function Devloper() {
+function Devloper({ classroom, grades }) {
   const devloperstyle = {
     margin: '20px',
     padding: '20px',
@@ -49,11 +54,11 @@ function Devloper() {
   }
   return (
     <div style={devloperstyle}>
-      <h3>Go to Dhaka</h3>
+      <h3>Class: {classroom}</h3>
+      <p>Grades: {grades}</p>
       <p>Dhaka is a beautiful city</p>
     </div>
   )
 }
 
 export default App
-
