@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Tool from './tool'
 import BookStore from './Books'
+import Counter from './Counter'
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
       {/* Dynamic Developers */}
       <Devloper classroom="1" grades={5.00} />
       <Devloper classroom="2" grades={4.75} />
+
+      <BookStore/>
+      <Counter/>
     </>
   )
 }
