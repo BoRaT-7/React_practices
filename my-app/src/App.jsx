@@ -3,6 +3,8 @@ import './App.css'
 import Tool from './tool'
 import BookStore from './Books'
 import Counter from './Counter'
+import Users from './user'
+import Myfriends from './Friends'
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
 
       <BookStore/>
       <Counter/>
+      <Users/>
+      <Myfriends/>
+      
     </>
   )
 }
