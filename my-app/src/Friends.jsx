@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Frients.css'
+import Allfriends from './Allfriend'
 export default function Myfriends(){
     const[friends,setFriends]= useState([])
     useEffect(()=>{
@@ -11,6 +12,12 @@ export default function Myfriends(){
     return(
         <div className='box'>
           <h3>Friends:{friends.length}</h3>
+         {
+            friends.map(friend =><Allfriends key={friend.id} friend={friend}  />)
+         }
+
+
+
         </div>
     )
 }
