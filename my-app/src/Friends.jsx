@@ -17,7 +17,9 @@ export default function Myfriends(){
          }
 
 
-
+        <button className='bookingbtn'>Booking Now </button>
         </div>
+
+        
     )
 }
