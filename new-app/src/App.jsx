@@ -4,10 +4,11 @@ import Countries from './components/Countryes/Country'
 function App() {
   return (
     <div>
-      <h1>React world tour</h1>
+      <h1>React World Tour</h1>
       <Countries />
+      Co
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
